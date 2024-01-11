@@ -1,0 +1,60 @@
+@use 'sass:color';
+
+.navbar > .container {
+  justify-content: unset;
+}
+
+.navbar-brand {
+  flex: 1;
+}
+
+#main-menu {
+  --bs-nav-link-font-weight: 700;
+  --bs-nav-link-color: #{$clrMelanite};
+  --bs-nav-link-hover-color: #{$clrPrimary};
+  --bs-navbar-active-color: #{$clrPrimary};
+  gap: 0 3rem;
+  flex: 2;
+
+  .nav-link {
+    position: relative;
+    margin-bottom: 0.5rem;
+
+    &.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0.25rem;
+      aspect-ratio: 1;
+      background-color: $clrPrimary;
+      border-radius: 50%;
+    }
+  }
+}
+
+.lang-dropdown {
+  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-padding-x: 0;
+  --bs-nav-link-font-weight: 700;
+  --bs-nav-link-color: #{$clrPrimary};
+
+  .dropdown-toggle {
+    &::after {
+      content: none;
+    }
+  }
+
+  .dropdown-menu {
+    --bs-dropdown-min-width: auto;
+    --bs-dropdown-padding-y: 0;
+    --bs-dropdown-border-radius: 0;
+    --bs-dropdown-border-color: none;
+    --bs-dropdown-bg: #{$clrPrimary};
+    --bs-dropdown-link-color: white;
+    --bs-dropdown-link-hover-color: white;
+    --bs-dropdown-link-hover-bg: #{color.scale($clrPrimary, $lightness: -10%)};
+    --bs-dropdown-item-padding-y: 0.5rem;
+  }
+}

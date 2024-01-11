@@ -1,0 +1,10 @@
+@import 'fonts', 'variables', 'navigation';
+
+body {
+  font-family: $fontMulish;
+  color: $clrBlack;
+}
+
+.text-orange {
+  color: $clrPrimary !important;
+}

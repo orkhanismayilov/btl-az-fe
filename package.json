@@ -1,0 +1,14 @@
+{
+  "name": "btl-fe",
+  "version": "1.0.0",
+  "description": "BTL - Frontend",
+  "scripts": {
+    "watch:scss": "sass ./assets/styles:./assets/styles -w --style compressed",
+    "compile:scss": "sass ./assets/styles:./assets/styles --style compressed"
+  },
+  "keywords": [
+    "BTL"
+  ],
+  "author": "Orkhan Ismayilov",
+  "license": "ISC"
+}
