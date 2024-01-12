@@ -1,0 +1,24 @@
+.text-orange {
+  color: $clrPrimary !important;
+}
+
+.text-accent {
+  color: $clrAccent !important;
+}
+
+.section-spacing {
+  padding-block: 2rem;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+
+  & > * {
+    margin: 0;
+
+    &:not(:first-child) {
+      margin-top: 1em;
+    }
+  }
+}
