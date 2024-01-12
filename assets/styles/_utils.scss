@@ -1,3 +1,5 @@
+@use 'functions';
+
 .text-orange {
   color: $clrPrimary !important;
 }
@@ -6,8 +8,54 @@
   color: $clrAccent !important;
 }
 
+.text-melanite {
+  color: $clrMelanite !important;
+}
+
+.text-black {
+  color: $clrBlack !important;
+}
+
+.icon-link {
+  color: $clrMelanite;
+  transition: all 0.15s;
+
+  i {
+    color: $clrPrimary;
+    transition: all 0.15s;
+  }
+
+  @media (hover) {
+    &:hover {
+      color: $clrPrimary;
+
+      i {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+.link-white {
+  --bs-link-color-rgb: 255, 255, 255;
+  --bs-link-hover-color-rgb: #{functions.hexToRgb($clrPrimary)};
+  transition: all 0.15s;
+}
+
 .section-spacing {
   padding-block: 2rem;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+
+  span {
+    background-image: linear-gradient(90deg, $clrPrimary 50%, rgba($clrPrimary, 0.4) 110%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .flow {
@@ -19,6 +67,48 @@
 
     &:not(:first-child) {
       margin-top: 1em;
+    }
+  }
+}
+
+.tab-nav {
+  &-item {
+    background-color: rgba($clrPrimary, 0.5);
+    transition: all 0.2s;
+    cursor: pointer;
+
+    &.active {
+      background-color: $clrPrimary;
+      color: white;
+    }
+  }
+}
+
+.gradient-hover {
+  $_transitionDuration: 0.2s;
+  position: relative;
+  isolation: isolate;
+  transition: all $_transitionDuration;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-image: linear-gradient(270deg, $clrPrimary 15%, rgba($clrPrimary, 0.4) 105%);
+    opacity: 0;
+    transition: all $_transitionDuration ease-out;
+    z-index: -1;
+  }
+
+  @media (hover) {
+    &:hover {
+      color: white;
+      background-color: transparent;
+
+      &::before {
+        opacity: 1;
+      }
     }
   }
 }

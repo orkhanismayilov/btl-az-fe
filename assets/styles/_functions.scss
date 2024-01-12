@@ -1,0 +1,8 @@
+@function hexToRgb($hex) {
+  $red: red($hex);
+  $green: green($hex);
+  $blue: blue($hex);
+
+  // Return the RGB values as a string
+  @return $red + ', ' + $green + ', ' + $blue;
+}
