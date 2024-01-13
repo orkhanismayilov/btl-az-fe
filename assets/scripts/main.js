@@ -9,5 +9,10 @@ if (heroSwiper) {
       enabled: true,
       nextEl: '.swiper-button-next',
     },
+    pagination: {
+      enabled: true,
+      clickable: true,
+      el: '.swiper-pagination',
+    },
   });
 }

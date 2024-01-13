@@ -27,6 +27,15 @@ svg {
       font-family: $fontFontAwesome;
     }
   }
+
+  .swiper-pagination {
+    --swiper-pagination-bottom: 3rem;
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+    --swiper-pagination-color: white;
+    --swiper-pagination-bullet-inactive-color: white;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+  }
 }
 
 .hero-slide {
