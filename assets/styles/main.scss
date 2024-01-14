@@ -109,3 +109,47 @@ svg {
     }
   }
 }
+
+.why-section-counters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 0;
+}
+
+.why-section-counter-item {
+  display: flex;
+  flex: 1 0 50%;
+  flex-direction: column;
+  align-items: center;
+
+  &:nth-child(odd) {
+    border-right: 1px solid $clrGray;
+  }
+
+  span:first-child {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  span:last-child {
+    font-size: 1.5rem;
+  }
+}
+
+.companies-list {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100px;
+  justify-content: space-between;
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 12%;
+
+    img {
+      max-height: 100%;
+    }
+  }
+}

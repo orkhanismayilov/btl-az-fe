@@ -17,9 +17,24 @@
 }
 
 .text-gradient {
-  background-image: linear-gradient(90deg, $clrPrimary 50%, rgba($clrPrimary, 0.4) 110%);
+  background-image: linear-gradient(90deg, $clrPrimary 20%, rgba($clrPrimary, 0.4) 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.text-underlined {
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 72.5% 0 auto 0;
+    height: 100vh;
+    background-image: url('/assets/images/illustrations/underline.svg');
+    background-repeat: no-repeat;
+  }
 }
 
 .icon-link {
@@ -56,6 +71,10 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 2rem;
+
+  &-bold {
+    font-weight: 800;
+  }
 }
 
 .flow {
@@ -109,6 +128,37 @@
       &::before {
         opacity: 1;
       }
+    }
+  }
+}
+
+.list-check {
+  $_listItemSpacing: 1rem;
+
+  &-space-lg {
+    $_listItemSpacing: 1.5rem;
+  }
+
+  &-space-xl {
+    $_listItemSpacing: 3rem;
+  }
+
+  li {
+    position: relative;
+    padding-left: 3.5rem;
+
+    &::before {
+      content: '\f00c';
+      position: absolute;
+      inset: 0 auto auto 0;
+      font-family: $fontFontAwesome;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      color: $clrPrimary;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $_listItemSpacing;
     }
   }
 }
