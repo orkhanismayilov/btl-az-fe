@@ -172,24 +172,21 @@
   --_link-scale: 1;
   --_icon-size: 2.5rem;
   display: grid;
-  grid-template-areas: 'stack';
-  place-items: center;
-
-  & > * {
-    grid-area: stack;
-  }
+  position: relative;
 
   &-link {
     display: grid;
     place-items: center;
     width: var(--_link-size);
     aspect-ratio: 1;
+    position: absolute;
+    inset: 50% auto auto 50%;
     border-radius: 50%;
     background-color: $clr-primary;
     color: white;
     font-size: var(--_icon-size);
     text-decoration: none;
-    transform: scale(var(--_link-scale));
+    transform: translate(-50%, -50%) scale(var(--_link-scale));
     will-change: transform;
     transition: all 0.3s;
 
