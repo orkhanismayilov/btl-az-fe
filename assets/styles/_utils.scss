@@ -118,7 +118,7 @@
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background-image: linear-gradient(270deg, $clr-primary 15%, rgba($clr-primary, 0.4) 105%);
+    background-image: linear-gradient(90deg, rgba($clr-primary, 0.4) 5%, $clr-primary 50%);
     opacity: 0;
     transition: all var(--_transition-duration) ease-out;
     z-index: -1;
