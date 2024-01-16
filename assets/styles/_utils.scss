@@ -1,23 +1,23 @@
 @use 'functions';
 
 .text-orange {
-  color: $clrPrimary !important;
+  color: $clr-primary !important;
 }
 
 .text-accent {
-  color: $clrAccent !important;
+  color: $clr-accent !important;
 }
 
 .text-melanite {
-  color: $clrMelanite !important;
+  color: $clr-melanite !important;
 }
 
 .text-black {
-  color: $clrBlack !important;
+  color: $clr-black !important;
 }
 
 .text-gradient {
-  background-image: linear-gradient(90deg, $clrPrimary 20%, rgba($clrPrimary, 0.4) 100%);
+  background-image: linear-gradient(90deg, $clr-primary 20%, rgba($clr-primary, 0.4) 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -38,17 +38,17 @@
 }
 
 .icon-link {
-  color: $clrMelanite;
+  color: $clr-melanite;
   transition: all 0.15s;
 
   i {
-    color: $clrPrimary;
+    color: $clr-primary;
     transition: all 0.15s;
   }
 
   @media (hover) {
     &:hover {
-      color: $clrPrimary;
+      color: $clr-primary;
 
       i {
         transform: translateX(5px);
@@ -59,8 +59,12 @@
 
 .link-white {
   --bs-link-color-rgb: 255, 255, 255;
-  --bs-link-hover-color-rgb: #{functions.hexToRgb($clrPrimary)};
+  --bs-link-hover-color-rgb: #{functions.hexToRgb($clr-primary)};
   transition: all 0.15s;
+}
+
+.border-orange {
+  border-color: $clr-primary !important;
 }
 
 .section-spacing {
@@ -92,31 +96,31 @@
 
 .tab-nav {
   &-item {
-    background-color: rgba($clrPrimary, 0.5);
+    background-color: rgba($clr-primary, 0.5);
     transition: all 0.2s;
     cursor: pointer;
 
     &.active {
-      background-color: $clrPrimary;
+      background-color: $clr-primary;
       color: white;
     }
   }
 }
 
 .gradient-hover {
-  $_transitionDuration: 0.2s;
+  --_transition-duration: 0.2s;
   position: relative;
   isolation: isolate;
-  transition: all $_transitionDuration;
+  transition: all var(--_transition-duration);
 
   &::before {
     content: '';
     position: absolute;
     inset: 0;
     border-radius: inherit;
-    background-image: linear-gradient(270deg, $clrPrimary 15%, rgba($clrPrimary, 0.4) 105%);
+    background-image: linear-gradient(270deg, $clr-primary 15%, rgba($clr-primary, 0.4) 105%);
     opacity: 0;
-    transition: all $_transitionDuration ease-out;
+    transition: all var(--_transition-duration) ease-out;
     z-index: -1;
   }
 
@@ -133,14 +137,14 @@
 }
 
 .list-check {
-  $_listItemSpacing: 1rem;
+  --_link-item-spacing: 1rem;
 
   &-space-lg {
-    $_listItemSpacing: 1.5rem;
+    --_link-item-spacing: 1.5rem;
   }
 
   &-space-xl {
-    $_listItemSpacing: 3rem;
+    --_link-item-spacing: 3rem;
   }
 
   li {
@@ -151,14 +155,71 @@
       content: '\f00c';
       position: absolute;
       inset: 0 auto auto 0;
-      font-family: $fontFontAwesome;
+      font-family: $font-font-awesome;
       font-size: 2.5rem;
       line-height: 2.5rem;
-      color: $clrPrimary;
+      color: $clr-primary;
     }
 
     &:not(:last-child) {
-      margin-bottom: $_listItemSpacing;
+      margin-bottom: var(--_link-item-spacing);
+    }
+  }
+}
+
+.linked-wrapper {
+  --_link-size: 6.5rem;
+  --_link-scale: 1;
+  --_icon-size: 2.5rem;
+  display: grid;
+  grid-template-areas: 'stack';
+  place-items: center;
+
+  & > * {
+    grid-area: stack;
+  }
+
+  &-link {
+    display: grid;
+    place-items: center;
+    width: var(--_link-size);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: $clr-primary;
+    color: white;
+    font-size: var(--_icon-size);
+    text-decoration: none;
+    transform: scale(var(--_link-scale));
+    will-change: transform;
+    transition: all 0.3s;
+
+    &-sm {
+      --_icon-size: 1.5rem;
+    }
+
+    &-lg {
+      --_icon-size: 3.5rem;
+    }
+
+    i {
+      transition: inherit;
+      will-change: transform;
+    }
+
+    @media (hover) {
+      &:hover {
+        box-shadow: 0 0 50px rgba(black, 0.3);
+
+        i {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  @media (hover) {
+    &:hover {
+      --_link-scale: 1.2;
     }
   }
 }

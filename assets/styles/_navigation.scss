@@ -10,9 +10,9 @@
 
 #main-menu {
   --bs-nav-link-font-weight: 700;
-  --bs-nav-link-color: #{$clrMelanite};
-  --bs-nav-link-hover-color: #{$clrPrimary};
-  --bs-navbar-active-color: #{$clrPrimary};
+  --bs-nav-link-color: #{$clr-melanite};
+  --bs-nav-link-hover-color: #{$clr-primary};
+  --bs-navbar-active-color: #{$clr-primary};
   gap: 0 3rem;
   flex: 2;
 
@@ -28,7 +28,7 @@
       transform: translateX(-50%);
       width: 0.25rem;
       aspect-ratio: 1;
-      background-color: $clrPrimary;
+      background-color: $clr-primary;
       border-radius: 50%;
     }
   }
@@ -38,7 +38,7 @@
   --bs-nav-link-padding-y: 0.5rem;
   --bs-nav-link-padding-x: 0;
   --bs-nav-link-font-weight: 700;
-  --bs-nav-link-color: #{$clrPrimary};
+  --bs-nav-link-color: #{$clr-primary};
 
   .dropdown-toggle {
     &::after {
@@ -51,10 +51,10 @@
     --bs-dropdown-padding-y: 0;
     --bs-dropdown-border-radius: 0;
     --bs-dropdown-border-color: none;
-    --bs-dropdown-bg: #{$clrPrimary};
+    --bs-dropdown-bg: #{$clr-primary};
     --bs-dropdown-link-color: white;
     --bs-dropdown-link-hover-color: white;
-    --bs-dropdown-link-hover-bg: #{color.scale($clrPrimary, $lightness: -10%)};
+    --bs-dropdown-link-hover-bg: #{color.scale($clr-primary, $lightness: -10%)};
     --bs-dropdown-item-padding-y: 0.5rem;
   }
 }
