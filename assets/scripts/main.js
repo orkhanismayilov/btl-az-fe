@@ -5,6 +5,7 @@ if (heroSwiper) {
   new Swiper(heroSwiper, {
     loop: true,
     speed: 500,
+    effect: 'fade',
     navigation: {
       enabled: true,
       nextEl: '.swiper-button-next',
