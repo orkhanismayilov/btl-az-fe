@@ -1,8 +1,11 @@
+@use 'mixins';
+
 @import 'fonts', 'variables', 'navigation', 'utils';
 
 body {
   font-family: $font-mulish;
   color: $clr-black;
+  position: relative;
 }
 
 main {
@@ -305,4 +308,56 @@ svg {
   display: flex;
   gap: 0.75rem;
   font-size: 1.5rem;
+}
+
+.circles-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+
+  &-item {
+    --_move-x-coef: -1.4;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(50% 50% at 50% 50%, rgba($clr-accent, 0.3), transparent);
+  }
+
+  &[data-positioning='homepage'] {
+    $circles-positions: (
+      (
+        width: 825px,
+        height: 1015px,
+        inset: 0 auto auto calc(825px / var(--_move-x-coef)),
+      ),
+      (
+        width: 1340px,
+        height: 1340px,
+        inset: 900px calc(1340px / var(--_move-x-coef)) auto auto,
+      ),
+      (
+        width: 690px,
+        height: 690px,
+        inset: 1450px auto auto calc(690px / var(--_move-x-coef)),
+      ),
+      (
+        width: 500px,
+        height: 500px,
+        inset: 2450px auto auto 350px,
+      ),
+      (
+        width: 1170px,
+        height: 1170px,
+        inset: 2750px calc(1170px / var(--_move-x-coef)) auto auto,
+      ),
+      (
+        width: 935px,
+        height: 1150px,
+        inset: 3340px auto auto calc(935px / var(--_move-x-coef)),
+      )
+    );
+
+    @include mixins.bg-circle-positions($circles-positions);
+  }
 }

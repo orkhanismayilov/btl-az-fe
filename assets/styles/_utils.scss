@@ -59,7 +59,7 @@
 
 .link-white {
   --bs-link-color-rgb: 255, 255, 255;
-  --bs-link-hover-color-rgb: #{functions.hexToRgb($clr-primary)};
+  --bs-link-hover-color-rgb: #{functions.hex-to-rgb($clr-primary)};
   transition: all 0.15s;
 }
 

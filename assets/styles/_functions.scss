@@ -1,4 +1,4 @@
-@function hexToRgb($hex) {
+@function hex-to-rgb($hex) {
   $red: red($hex);
   $green: green($hex);
   $blue: blue($hex);

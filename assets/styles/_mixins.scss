@@ -1,0 +1,12 @@
+@use 'sass:list';
+@use 'sass:map';
+
+@mixin bg-circle-positions($circles-positions) {
+  @each $position in $circles-positions {
+    .circles-bg-item:nth-of-type(#{list.index($circles-positions, $position)}) {
+      width: map.get($position, width);
+      height: map.get($position, height);
+      inset: map.get($position, inset);
+    }
+  }
+}
