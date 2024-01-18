@@ -327,6 +327,11 @@ svg {
   &[data-positioning='homepage'] {
     $circles-positions: (
       (
+        width: 350px,
+        height: 350px,
+        inset: 0 10% auto auto,
+      ),
+      (
         width: 825px,
         height: 1015px,
         inset: 0 auto auto calc(825px / var(--_move-x-coef)),
