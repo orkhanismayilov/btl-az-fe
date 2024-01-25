@@ -39,3 +39,8 @@ if (whySectionCounters.length) {
     io.observe(whyCounter);
   }
 }
+
+const contactForm = document.forms['contact-us-form'];
+if (contactForm) {
+  new ContactForm('/contact-us', contactForm);
+}

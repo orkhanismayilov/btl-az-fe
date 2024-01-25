@@ -417,6 +417,15 @@ footer {
     &:focus {
       border-color: $clr-primary;
     }
+
+    &:invalid {
+      border-color: var(--bs-red);
+      outline: 1px solid var(--bs-red);
+    }
+  }
+
+  .form-text {
+    padding: 0 1.25rem;
   }
 
   textarea {
@@ -497,6 +506,35 @@ footer {
 
 #contact-us-form {
   button[type='submit'] {
-    margin-top: 8rem;
+    margin-top: 5rem;
   }
+}
+
+.swal2-popup {
+  border-radius: 2rem;
+}
+
+.swal2-icon {
+  width: unset;
+  height: unset;
+  margin: 2rem auto 0.6rem;
+  border: none;
+  font-size: 2rem;
+}
+
+.swal2-title {
+  padding-inline: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.swal2-html-container {
+  font-size: 0.875rem !important;
+  font-weight: 500 !important;
+}
+
+.swal2-close {
+  position: absolute;
+  margin: 0;
+  inset: 1rem 1rem auto auto;
 }
