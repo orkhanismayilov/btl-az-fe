@@ -42,5 +42,12 @@ if (whySectionCounters.length) {
 
 const contactForm = document.forms['contact-us-form'];
 if (contactForm) {
+  // TODO: Update url
   new ContactForm('/contact-us', contactForm);
+}
+
+const galleryWrapper = document.querySelector('.gallery-grid-wrapper');
+if (galleryWrapper) {
+  // TODO: Update url
+  new Gallery('/gallery', galleryWrapper);
 }

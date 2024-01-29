@@ -394,6 +394,28 @@ footer {
 
     @include mixins.bg-circle-positions($circles-positions);
   }
+
+  &[data-positioning='gallery'] {
+    $circles-positions: (
+      (
+        width: 825px,
+        height: 825px,
+        inset: 0 8% auto auto,
+      ),
+      (
+        width: 1000px,
+        height: 1000px,
+        inset: 625px auto auto 10%,
+      ),
+      (
+        width: 1440px,
+        height: 1440px,
+        inset: 1630px calc(1440px / var(--_move-x-coef)) auto auto,
+      )
+    );
+
+    @include mixins.bg-circle-positions($circles-positions);
+  }
 }
 
 .contact-us-wrapper {
@@ -538,4 +560,99 @@ footer {
   position: absolute;
   margin: 0;
   inset: 1rem 1rem auto auto;
+}
+
+.gallery-grid-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  grid-template-rows: repeat(8, 130px);
+  gap: 1.25rem;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    cursor: zoom-in;
+
+    &:nth-of-type(1) {
+      grid-column: span 4;
+      grid-row: span 5;
+    }
+
+    &:nth-of-type(2) {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
+
+    &:nth-of-type(3) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    &:nth-of-type(4) {
+      grid-column: span 2;
+      grid-row: span 3;
+    }
+
+    &:nth-of-type(5) {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
+
+    &:nth-of-type(6) {
+      grid-column: span 6;
+      grid-row: span 3;
+    }
+
+    &:nth-of-type(7) {
+      grid-column: 7 / 10;
+      grid-row: 5 / 9;
+    }
+  }
+
+  &-reversed {
+    img {
+      &:nth-of-type(1) {
+        grid-column: 1 / 4;
+        grid-row: span 4;
+      }
+
+      &:nth-of-type(2) {
+        grid-column: span 6;
+        grid-row: span 3;
+      }
+
+      &:nth-of-type(3) {
+        grid-column: 1 / 4;
+        grid-row: 5 / 7;
+      }
+
+      &:nth-of-type(4) {
+        grid-column: span 2;
+        grid-row: span 3;
+      }
+
+      &:nth-of-type(5) {
+        grid-column: 1 / 3;
+        grid-row: span 2;
+      }
+
+      &:nth-of-type(6) {
+        grid-column: 3 / 6;
+        grid-row: span 2;
+      }
+
+      &:nth-of-type(7) {
+        grid-column: 6 / 10;
+        grid-row: 4 / 9;
+      }
+    }
+  }
 }

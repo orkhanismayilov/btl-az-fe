@@ -198,7 +198,7 @@
 
 .btn-inner-wrapper {
   --_gap: 1rem;
-  --_transition-duration: 0.2s;
+  --_transition-duration: 0.15s;
   display: flex;
   align-items: center;
   gap: var(--_gap);
@@ -211,7 +211,7 @@
     display: grid;
     place-items: center;
     height: 100%;
-    padding-inline: 4rem;
+    padding-inline: 3.5rem;
     position: relative;
     background-color: $clr-primary;
     border-radius: 2rem;
