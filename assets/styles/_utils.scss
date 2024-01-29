@@ -81,6 +81,18 @@
 
 .section-spacing {
   padding-block: 2rem;
+
+  &-sm {
+    padding-block: 1rem;
+  }
+
+  &-lg {
+    padding-block: 4rem;
+  }
+
+  &-xl {
+    padding-block: 8rem;
+  }
 }
 
 .section-title {
