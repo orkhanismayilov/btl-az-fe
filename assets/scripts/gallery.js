@@ -55,22 +55,29 @@ class Gallery {
   async fetchData() {
     this.toggleButton(true);
 
-    const response = await fetch(`${this.url}?page=${this.page}`);
+    try {
+      const response = await fetch(`${this.url}?page=${this.page + 1}`);
 
-    if (!response.ok) {
+      if (!response.ok) {
+        this.toggleButton(false);
+        return;
+      }
+
+      const body = await response.json();
+      this.appenData(body.data);
+      this.page++;
+
+      if (!body.lastPage) {
+        this.toggleButton(false);
+        return;
+      }
+
+      this.loadMoreBtn.remove();
+    } catch (err) {
       this.toggleButton(false);
+      console.error(err);
       return;
     }
-
-    const body = await response.json();
-    this.appenData(body.data);
-
-    if (!body.lastPage) {
-      this.toggleButton(false);
-      return;
-    }
-
-    this.loadMoreBtn.remove();
   }
 
   /**

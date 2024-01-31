@@ -171,22 +171,27 @@ class ContactForm {
     this.form.disabled = true;
     this.submitButton.disabled = true;
 
-    const response = await fetch(this.url, {
-      body: this.requestBody,
-      method: this.method,
-      cache: 'no-cache',
-    });
+    try {
+      const response = await fetch(this.url, {
+        body: this.requestBody,
+        method: this.method,
+        cache: 'no-cache',
+      });
+
+      if (!response.ok) {
+        this.showMessage(false);
+        return;
+      }
+
+      this.form.reset();
+      this.showMessage();
+    } catch (err) {
+      this.showMessage(false);
+      console.error(err);
+    }
 
     this.form.disabled = false;
     this.submitButton.disabled = false;
-
-    if (!response.ok) {
-      this.showMessage(false);
-      return;
-    }
-
-    this.form.reset();
-    this.showMessage();
   }
 
   showMessage(success = true) {
