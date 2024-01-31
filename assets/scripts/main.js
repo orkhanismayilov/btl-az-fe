@@ -51,3 +51,9 @@ if (galleryWrapper) {
   // TODO: Update url
   new Gallery('/gallery', galleryWrapper);
 }
+
+const projectGallery = document.querySelector('.project-gallery-swiper');
+const projectGalleryThumbs = document.querySelector('.project-gallery-thumbs');
+if (projectGallery && projectGalleryThumbs) {
+  new ProjectGallery(projectGallery, projectGalleryThumbs);
+}
