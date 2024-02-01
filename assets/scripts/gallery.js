@@ -40,7 +40,7 @@ class Gallery {
 
   init() {
     this.loadMoreBtn = document.querySelector('[data-gallery-load-more]');
-    this.loadMoreBtnIcon = document.querySelector('i');
+    this.loadMoreBtnIcon = this.loadMoreBtn.querySelector('i');
 
     this.loadMoreBtn?.addEventListener('click', async e => {
       e.stopPropagation();
