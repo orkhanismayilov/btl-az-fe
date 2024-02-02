@@ -68,8 +68,7 @@ if (contactForm) {
 
 const galleryWrapper = document.querySelector('.gallery-grid-wrapper');
 if (galleryWrapper) {
-  // TODO: Update url
-  new Gallery('/gallery', galleryWrapper);
+  new Gallery(galleryWrapper);
 }
 
 const projectGallery = document.querySelector('.project-gallery-swiper');

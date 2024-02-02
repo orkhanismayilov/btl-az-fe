@@ -21,26 +21,25 @@ class Gallery {
   loadMoreBtnIcon;
 
   /**
-   * @param {string} url
    * @param {HTMLElement} wrapper
    */
-  constructor(url, wrapper) {
+  constructor(wrapper) {
     if (!wrapper) {
       throw new Error('Gallery wrapper is missing!');
     }
 
-    if (!url.trim()) {
-      throw new Error('URL is missing!');
-    }
-
-    this.url = url.trim();
     this.wrapper = wrapper;
     this.init();
   }
 
   init() {
     this.loadMoreBtn = document.querySelector('[data-gallery-load-more]');
-    this.loadMoreBtnIcon = this.loadMoreBtn.querySelector('i');
+    this.loadMoreBtnIcon = this.loadMoreBtn?.querySelector('i');
+    this.url = this.loadMoreBtn?.dataset.url.trim();
+
+    if (!this.url) {
+      throw new Error('URL is missing!');
+    }
 
     this.loadMoreBtn?.addEventListener('click', async e => {
       e.stopPropagation();
