@@ -71,19 +71,18 @@ class ContactForm {
   }
 
   /**
-   * @param {string} url
    * @param {HTMLFormElement} form
    */
-  constructor(url, form) {
+  constructor(form) {
     if (!form) {
       throw new Error('Form is missing!');
     }
 
-    if (!url.trim()) {
-      throw new Error('URL is missing!');
+    if (!form.action.trim()) {
+      throw new Error('Action URL is missing!');
     }
 
-    this.url = url.trim();
+    this.url = form.action.trim();
     this.form = form;
     this.init();
   }
@@ -180,7 +179,7 @@ class ContactForm {
 
       if (!response.ok) {
         this.showMessage(false);
-        return;
+        throw new Error(response.statusText);
       }
 
       this.form.reset();

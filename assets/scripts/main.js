@@ -62,8 +62,7 @@ if (whySectionCounters.length) {
 
 const contactForm = document.forms['contact-us-form'];
 if (contactForm) {
-  // TODO: Update url
-  new ContactForm('/contact-us', contactForm);
+  new ContactForm(contactForm);
 }
 
 const galleryWrapper = document.querySelector('.gallery-grid-wrapper');
