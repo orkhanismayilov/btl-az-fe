@@ -423,6 +423,38 @@ footer {
     @include mixins.bg-circle-positions($circles-positions);
   }
 
+  &[data-positioning='projects'] {
+    $circles-positions: (
+      (
+        width: 825px,
+        height: 825px,
+        inset: 150px 100px auto auto,
+      ),
+      (
+        width: 1040px,
+        height: 1040px,
+        inset: 360px auto auto calc(1040px / var(--_move-x-coef)),
+      ),
+      (
+        width: 1040px,
+        height: 1040px,
+        inset: 800px 0 auto auto,
+      ),
+      (
+        width: 1300px,
+        height: 1300px,
+        inset: 1900px auto auto calc(1300px / var(--_move-x-coef)),
+      ),
+      (
+        width: 1300px,
+        height: 1300px,
+        inset: 1900px calc(1300px / var(--_move-x-coef)) auto auto,
+      )
+    );
+
+    @include mixins.bg-circle-positions($circles-positions);
+  }
+
   &[data-positioning='gallery'] {
     $circles-positions: (
       (
