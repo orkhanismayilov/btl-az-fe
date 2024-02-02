@@ -57,3 +57,35 @@ const projectGalleryThumbs = document.querySelector('.project-gallery-thumbs');
 if (projectGallery && projectGalleryThumbs) {
   new ProjectGallery(projectGallery, projectGalleryThumbs);
 }
+
+const loadMoreProjectsBtn = document.querySelector('[data-projects-load-more]');
+if (loadMoreProjectsBtn) {
+  new Projects(loadMoreProjectsBtn);
+}
+
+const playBtns = document.querySelectorAll('.btn-play');
+if (playBtns.length && typeof Swal !== 'undefined') {
+  for (const btn of playBtns) {
+    btn.addEventListener('click', e => {
+      e.stopPropagation();
+
+      let { videoUrl } = btn.dataset;
+      if (!videoUrl || !videoUrl.includes('watch?v=')) {
+        throw new Error('Video URL is missing or invalid');
+      }
+
+      videoUrl = videoUrl.replace('watch?v=', 'embed/');
+      Swal.fire({
+        html: `<iframe width="100%" src="${videoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
+        showConfirmButton: false,
+        showCloseButton: true,
+        width: '80%',
+        padding: 0,
+        customClass: {
+          popup: 'swal-video-popup',
+          htmlContainer: 'swal-video-container',
+        },
+      });
+    });
+  }
+}

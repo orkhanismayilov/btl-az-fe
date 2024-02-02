@@ -134,6 +134,8 @@
 .tab-nav {
   &-item {
     background-color: rgba($clr-primary, 0.5);
+    color: $clr-black;
+    text-decoration: none;
     transition: all 0.2s;
     cursor: pointer;
 
@@ -259,4 +261,16 @@
     inset: auto var(--_shift-x) var(--_shift-y) auto;
     border-color: $clr-primary transparent transparent transparent;
   }
+}
+
+.btn-outline-primary {
+  --bs-btn-border-width: 2px;
+  --bs-btn-border-color: #{$clr-primary};
+  --bs-btn-hover-border-color: #{$clr-primary};
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-color: #{$clr-black};
+  --bs-btn-hover-bg: #{$clr-primary};
+  --bs-btn-active-bg: #{$clr-primary};
+  --bs-btn-active-border-color: #{$clr-primary};
+  --bs-btn-font-weight: 700;
 }
