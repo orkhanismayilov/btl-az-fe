@@ -77,7 +77,6 @@ class Gallery {
       this.toggleButton(false);
       this.showError();
       console.error(err);
-      return;
     }
   }
 

@@ -75,7 +75,6 @@ class Projects {
       this.toggleButton(false);
       this.showError();
       console.error(err);
-      return;
     }
   }
 
