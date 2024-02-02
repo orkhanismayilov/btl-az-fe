@@ -57,6 +57,7 @@ class Projects {
 
       if (!response.ok) {
         this.toggleButton(false);
+        this.showError();
         return;
       }
 
@@ -72,6 +73,7 @@ class Projects {
       this.loadMoreBtn.remove();
     } catch (err) {
       this.toggleButton(false);
+      this.showError();
       console.error(err);
       return;
     }
@@ -96,5 +98,12 @@ class Projects {
     } else {
       this.loadMoreBtnIcon?.classList.remove('fa-fade');
     }
+  }
+
+  showError() {
+    Toast.fire({
+      iconHtml: '<i class="fa-regular fa-xmark text-danger"></i>',
+      title: 'Oops... Failed to load more! Please, try again.',
+    });
   }
 }

@@ -1,5 +1,25 @@
 `use strict`;
 
+// Toast Notifications
+if (typeof Swal !== 'undefined') {
+  window.Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    padding: '.25rem .75rem',
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    customClass: {
+      icon: 'swal-toast-icon',
+    },
+    didOpen: toast => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+      toast.onclick = Swal.close;
+    },
+  });
+}
+
 const heroSwiper = document.querySelector('.hero-swiper');
 if (heroSwiper) {
   new Swiper(heroSwiper, {
