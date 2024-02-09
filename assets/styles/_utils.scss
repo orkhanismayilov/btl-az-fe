@@ -282,7 +282,7 @@
     border-color: $clr-primary transparent transparent transparent;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .btn-inner-text {
       padding-inline: 3.5rem;
     }

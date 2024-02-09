@@ -631,12 +631,8 @@ footer {
 
 .contact-us-wrapper {
   position: relative;
-  min-height: 800px;
-  padding-block: 5rem 0;
-  margin-bottom: 5rem;
 
   .form-label {
-    padding-left: 1.25rem;
     font-weight: 600;
   }
 
@@ -658,23 +654,39 @@ footer {
     }
   }
 
-  .form-text {
-    padding: 0 1.25rem;
-  }
-
   textarea {
     padding-block: 1rem !important;
+  }
+
+  @media (min-width: 768px) {
+    min-height: 600px;
+    padding-block: 3rem 0;
+    margin-bottom: 3rem;
+
+    .form-label {
+      padding-left: 1.25rem;
+    }
+
+    .form-text {
+      padding: 0 1.25rem;
+    }
+  }
+
+  @media (min-width: 992px) {
+    min-height: 800px;
+    padding-block: 5rem 0;
+    margin-bottom: 5rem;
   }
 }
 
 .contact-us-bg-layer {
-  --_col-width: 360px;
+  --_col-width: 250px;
   --_gap: 1.75rem;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, var(--_col-width)));
   grid-template-rows: repeat(6, calc((var(--_col-width) - (var(--_gap) * 2)) / 3));
   gap: var(--_gap);
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1.2;
   position: absolute;
@@ -721,7 +733,7 @@ footer {
     z-index: 1;
 
     &.top {
-      inset: -0.5rem 2.5rem auto auto;
+      inset: -2rem 2.5rem auto auto;
       width: 15%;
     }
 
@@ -732,15 +744,48 @@ footer {
     }
 
     &.bottom {
-      inset: auto 45% -4.5rem auto;
+      inset: auto 20% -4.5rem auto;
       width: 100%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    --_col-width: 340px;
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 1200px) {
+    --_col-width: 360px;
+
+    .contact-us-arrow {
+      &.top {
+        inset: -0.5rem 2.5rem auto auto;
+      }
+
+      &.bottom {
+        inset: auto 30% -4.5rem auto;
+      }
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .contact-us-arrow {
+      &.bottom {
+        inset: auto 50% -4.5rem auto;
+      }
     }
   }
 }
 
 #contact-us-form {
   button[type='submit'] {
-    margin-top: 5rem;
+    margin-top: 2rem;
+  }
+
+  @media (min-width: 992px) {
+    button[type='submit'] {
+      margin-top: 5rem;
+    }
   }
 }
 
