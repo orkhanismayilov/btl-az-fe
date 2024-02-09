@@ -166,9 +166,28 @@
     }
   }
 
+  .btn {
+    font-size: inherit;
+    min-width: 35%;
+    flex-shrink: 0;
+  }
+
   @media (min-width: 768px) {
     margin-right: unset;
+    padding-right: unset;
     font-size: 1.25rem;
+  }
+
+  @media (min-width: 992px) {
+    &-item {
+      min-width: unset;
+      flex-shrink: 1;
+    }
+
+    .btn {
+      min-width: unset;
+      flex-shrink: 1;
+    }
   }
 }
 

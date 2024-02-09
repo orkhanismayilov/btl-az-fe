@@ -80,16 +80,39 @@ footer {
     --swiper-pagination-bullet-inactive-opacity: 0.5;
   }
 
+  &-project {
+    .swiper-button-next {
+      bottom: 1.5rem;
+    }
+
+    .swiper-pagination {
+      --swiper-pagination-bottom: 0.625rem;
+      --swiper-pagination-bullet-width: 5px;
+      --swiper-pagination-bullet-height: 5px;
+    }
+  }
+
   @media (min-width: 768px) {
     .swiper-button-next {
       --swiper-navigation-sides-offset: 2.5rem;
       --swiper-navigation-size: 3rem;
+      bottom: 5rem;
     }
 
     .swiper-pagination {
       --swiper-pagination-bottom: 2.5rem;
       --swiper-pagination-bullet-width: 10px;
       --swiper-pagination-bullet-height: 10px;
+    }
+
+    &-project {
+      .swiper-button-next {
+        bottom: 2.5rem;
+      }
+
+      .swiper-pagination {
+        --swiper-pagination-bottom: 0.625rem;
+      }
     }
   }
 
@@ -100,6 +123,12 @@ footer {
 
     .swiper-pagination {
       --swiper-pagination-bottom: 3rem;
+    }
+
+    &-project {
+      .swiper-button-next {
+        bottom: 5rem;
+      }
     }
   }
 }
@@ -125,14 +154,19 @@ footer {
     }
   }
 
-  &-16-9 {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-  }
-
   &-project {
-    padding-bottom: 5rem;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+
+    .hero-slide-title {
+      width: 90%;
+      font-size: 1rem;
+
+      & + span {
+        width: 90%;
+        font-size: 0.625rem;
+      }
+    }
   }
 
   &-slogan {
@@ -166,7 +200,7 @@ footer {
     position: absolute;
     inset: 50% auto auto 50%;
     padding: 0;
-    font-size: 7rem;
+    font-size: 2.5rem;
     line-height: 1;
     translate: -50% -50%;
     transition: all 0.2s;
@@ -183,6 +217,18 @@ footer {
     height: 500px;
     padding: 2.5rem;
 
+    &-project {
+      .hero-slide-title {
+        width: 90%;
+        font-size: 2rem;
+
+        & + span {
+          width: 90%;
+          font-size: 1rem;
+        }
+      }
+    }
+
     &-slogan {
       font-size: 1rem;
 
@@ -198,10 +244,22 @@ footer {
         font-size: 1rem;
       }
     }
+
+    .btn-play {
+      font-size: 4rem;
+    }
   }
 
   @media (min-width: 992px) {
     padding: 3rem 5rem;
+
+    &-project {
+      padding-bottom: 5rem;
+
+      .hero-slide-title {
+        font-size: 3rem;
+      }
+    }
 
     &-slogan {
       font-size: 1.5rem;
@@ -213,6 +271,10 @@ footer {
 
     &-title {
       font-size: 4rem;
+    }
+
+    .btn-play {
+      font-size: 7rem;
     }
   }
 }

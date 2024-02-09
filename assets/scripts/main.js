@@ -97,7 +97,7 @@ if (playBtns.length && typeof Swal !== 'undefined') {
         html: `<iframe width="100%" src="${videoUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`,
         showConfirmButton: false,
         showCloseButton: true,
-        width: '80%',
+        width: window.innerWidth < window.innerHeight ? '95%' : '80%',
         padding: 0,
         customClass: {
           popup: 'swal-video-popup',
