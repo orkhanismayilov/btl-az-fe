@@ -107,9 +107,15 @@
     font-weight: 800;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     font-size: 3rem;
     margin-bottom: 2rem;
+  }
+}
+
+.section-description {
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
   }
 }
 

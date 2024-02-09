@@ -171,108 +171,106 @@
     </header>
 
     <main>
-      <section class="section-spacing-lg">
+      <section class="section-spacing-lg gallery-page-section">
         <div class="container">
-          <div class="d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-between align-items-center position-relative">
             <img
+              class="gallery-illustration"
               src="/assets/images/illustrations/gallery-1.svg"
-              alt="Gallery Illustration"
-              width="180" />
+              alt="Gallery Illustration" />
 
-            <div class="flow flow-sm text-center">
+            <div class="flow flow-sm text-lg-center">
               <h1 class="section-title">Image Gallery</h1>
-              <p class="fs-5">
-                Welcome to our Gallery, where we invite you to explore a visual journey of
-                <br />
-                our work, experiences, and creativity.
+              <p class="section-description">
+                Welcome to our Gallery, where we invite you to explore a visual journey of our work, experiences, and
+                creativity.
               </p>
             </div>
 
             <img
+              class="d-none d-lg-block"
               src="/assets/images/illustrations/gallery-2.svg"
               alt="Gallery Illustration"
               width="125" />
           </div>
 
-          <div class="mt-5">
-            <div class="gallery-grid-wrapper">
-              <div class="gallery-grid">
-                <img
-                  src="/assets/images/gallery/gallery-1.jpg"
-                  alt="Gallery Image 1"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-2.jpg"
-                  alt="Gallery Image 2"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-3.jpg"
-                  alt="Gallery Image 3"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-4.jpg"
-                  alt="Gallery Image 4"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-5.jpg"
-                  alt="Gallery Image 5"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-6.jpg"
-                  alt="Gallery Image 6"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-7.jpg"
-                  alt="Gallery Image 7"
-                  data-fancybox="gallery" />
-              </div>
-
-              <div class="gallery-grid gallery-grid-reversed">
-                <img
-                  src="/assets/images/gallery/gallery-8.jpg"
-                  alt="Gallery Image 8"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-9.jpg"
-                  alt="Gallery Image 9"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-10.jpg"
-                  alt="Gallery Image 10"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-11.jpg"
-                  alt="Gallery Image 11"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-12.jpg"
-                  alt="Gallery Image 12"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-13.jpg"
-                  alt="Gallery Image 13"
-                  data-fancybox="gallery" />
-                <img
-                  src="/assets/images/gallery/gallery-14.jpg"
-                  alt="Gallery Image 14"
-                  data-fancybox="gallery" />
-              </div>
+          <div class="gallery-grid-wrapper mt-4 mt-lg-5">
+            <div class="gallery-grid">
+              <img
+                src="/assets/images/gallery/gallery-1.jpg"
+                alt="Gallery Image 1"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-2.jpg"
+                alt="Gallery Image 2"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-3.jpg"
+                alt="Gallery Image 3"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-4.jpg"
+                alt="Gallery Image 4"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-5.jpg"
+                alt="Gallery Image 5"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-6.jpg"
+                alt="Gallery Image 6"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-7.jpg"
+                alt="Gallery Image 7"
+                data-fancybox="gallery" />
             </div>
 
-            <div class="d-flex mt-5">
-              <button
-                class="btn btn-primary mx-auto"
-                type="button"
-                data-gallery-load-more
-                data-url="http://localhost:3000/gallery">
-                <div class="btn-inner-wrapper">
-                  <span class="btn-inner-text">Load More</span>
-                  <span class="btn-inner-icon">
-                    <i class="fa-regular fa-arrow-down"></i>
-                  </span>
-                </div>
-              </button>
+            <div class="gallery-grid gallery-grid-reversed">
+              <img
+                src="/assets/images/gallery/gallery-8.jpg"
+                alt="Gallery Image 8"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-9.jpg"
+                alt="Gallery Image 9"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-10.jpg"
+                alt="Gallery Image 10"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-11.jpg"
+                alt="Gallery Image 11"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-12.jpg"
+                alt="Gallery Image 12"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-13.jpg"
+                alt="Gallery Image 13"
+                data-fancybox="gallery" />
+              <img
+                src="/assets/images/gallery/gallery-14.jpg"
+                alt="Gallery Image 14"
+                data-fancybox="gallery" />
             </div>
+          </div>
+
+          <div class="d-flex mt-5">
+            <button
+              class="btn btn-primary mx-auto"
+              type="button"
+              data-gallery-load-more
+              data-url="/gallery">
+              <div class="btn-inner-wrapper">
+                <span class="btn-inner-text">Load More</span>
+                <span class="btn-inner-icon">
+                  <i class="fa-regular fa-arrow-down"></i>
+                </span>
+              </div>
+            </button>
           </div>
         </div>
       </section>
