@@ -80,16 +80,26 @@ footer {
     --swiper-pagination-bullet-inactive-opacity: 0.5;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .swiper-button-next {
-      --swiper-navigation-sides-offset: 5rem;
+      --swiper-navigation-sides-offset: 2.5rem;
       --swiper-navigation-size: 3rem;
     }
 
     .swiper-pagination {
-      --swiper-pagination-bottom: 3rem;
+      --swiper-pagination-bottom: 2.5rem;
       --swiper-pagination-bullet-width: 10px;
       --swiper-pagination-bullet-height: 10px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .swiper-button-next {
+      --swiper-navigation-sides-offset: 5rem;
+    }
+
+    .swiper-pagination {
+      --swiper-pagination-bottom: 3rem;
     }
   }
 }
@@ -169,8 +179,28 @@ footer {
     }
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     height: 500px;
+    padding: 2.5rem;
+
+    &-slogan {
+      font-size: 1rem;
+
+      &::before {
+        vertical-align: 0.4rem;
+      }
+    }
+
+    &-title {
+      font-size: 3rem;
+
+      & + span {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
     padding: 3rem 5rem;
 
     &-slogan {
@@ -183,10 +213,6 @@ footer {
 
     &-title {
       font-size: 4rem;
-
-      & + span {
-        font-size: 1rem;
-      }
     }
   }
 }
