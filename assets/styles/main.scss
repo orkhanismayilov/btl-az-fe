@@ -2,6 +2,14 @@
 
 @import 'reset', 'fonts', 'variables', 'navigation', 'utils';
 
+html {
+  --global-border-radius: 1.25rem;
+
+  @media (min-width: 768px) {
+    --global-border-radius: 2rem;
+  }
+}
+
 body {
   display: flex;
   min-height: 100dvh;
@@ -47,7 +55,7 @@ footer {
 }
 
 .hero-swiper {
-  border-radius: 2rem;
+  border-radius: var(--global-border-radius);
   overflow: hidden;
 
   .swiper-button-next {
@@ -194,7 +202,7 @@ footer {
 
   .specialization-image-wrapper {
     position: relative;
-    border-radius: 2rem;
+    border-radius: var(--global-border-radius);
     overflow: hidden;
 
     img {
@@ -279,11 +287,11 @@ footer {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: 1fr 1fr;
-  gap: 0.5rem;
+  gap: 0.75rem;
 
   &-item {
     height: 155px;
-    border-radius: 2rem;
+    border-radius: var(--global-border-radius);
 
     &:nth-of-type(1) {
       grid-column: span 2;
@@ -310,7 +318,6 @@ footer {
 
   @media (min-width: 992px) {
     grid-template-columns: repeat(10, minmax(0, 1fr));
-    grid-template-rows: 1fr 1fr;
     gap: 1rem;
 
     &-item {
@@ -359,7 +366,7 @@ footer {
   transition: all 0.15s ease-out;
 
   &-img-wrapper {
-    border-radius: 2rem;
+    border-radius: var(--global-border-radius);
     overflow: hidden;
 
     img {
@@ -638,7 +645,7 @@ footer {
 
   .form-control {
     --bs-border-color: #{$clr-accent};
-    border-radius: 2rem;
+    border-radius: var(--global-border-radius);
     box-shadow: none;
     outline: none;
     padding: 1rem 1.25rem;
@@ -700,7 +707,7 @@ footer {
   }
 
   img:not(.contact-us-arrow) {
-    border-radius: 2rem;
+    border-radius: var(--global-border-radius);
   }
 
   img:nth-of-type(1) {
@@ -790,7 +797,7 @@ footer {
 }
 
 .swal2-popup {
-  border-radius: 2rem;
+  border-radius: var(--global-border-radius);
 }
 
 .swal2-icon {
@@ -847,7 +854,7 @@ footer {
     height: 100%;
     object-fit: cover;
     object-position: top center;
-    border-radius: 1.25rem;
+    border-radius: var(--global-border-radius);
     cursor: zoom-in;
 
     &:nth-of-type(1) {
@@ -887,8 +894,6 @@ footer {
     gap: 1.25rem;
 
     img {
-      border-radius: 2rem;
-
       &:nth-of-type(1) {
         grid-row: span 1;
       }
@@ -996,7 +1001,7 @@ footer {
 
   &-swiper {
     width: 100%;
-    border-radius: 2rem;
+    border-radius: var(--global-border-radius);
     overflow: hidden;
 
     .swiper-slide > img {
