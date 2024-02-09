@@ -238,6 +238,10 @@
     }
   }
 
+  @media (min-width: 768px) {
+    --bs-btn-font-size: 1.25rem;
+  }
+
   @media (min-width: 992px) {
     --bs-btn-font-size: 1.5rem;
   }

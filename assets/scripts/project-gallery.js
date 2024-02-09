@@ -78,6 +78,18 @@ class ProjectGallery {
       thumbs: {
         swiper: this.thumbnails,
       },
+      pagination: {
+        enabled: true,
+        clickable: true,
+        el: '.swiper-pagination',
+      },
+      breakpoints: {
+        992: {
+          pagination: {
+            enabled: false,
+          },
+        },
+      },
     });
   }
 
