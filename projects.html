@@ -57,9 +57,9 @@
   </head>
   <body>
     <header>
-      <p class="slogan m-0 pt-2 text-center text-orange fw-bold">MICE to me you!</p>
+      <p class="slogan d-none d-lg-block m-0 pt-2 text-center text-orange fw-bold">MICE to me you!</p>
 
-      <nav class="navbar navbar-expand-lg py-0">
+      <nav class="navbar navbar-expand-lg py-0 pt-3 pt-lg-0">
         <div class="container">
           <a
             class="navbar-brand py-0"
@@ -72,42 +72,75 @@
 
           <div
             id="main-menu"
-            class="navbar-nav">
-            <li class="nav-item">
+            class="navbar-nav offcanvas offcanvas-lg offcanvas-start border-orange-light"
+            data-bs-backdrop="false">
+            <div class="nav-item">
               <a
                 class="nav-link"
                 aria-current="page"
                 href="/">
                 Home
               </a>
-            </li>
+            </div>
 
-            <li class="nav-item">
+            <div class="nav-item">
               <a
                 class="nav-link active"
                 href="/projects.html">
                 Projects
               </a>
-            </li>
+            </div>
 
-            <li class="nav-item">
+            <div class="nav-item">
               <a
                 class="nav-link"
                 href="/gallery.html">
                 Gallery
               </a>
-            </li>
+            </div>
 
-            <li class="nav-item">
+            <div class="nav-item">
               <a
                 class="nav-link"
                 href="/contact-us.html">
                 Contact Us
               </a>
-            </li>
+            </div>
+
+            <ul class="langs-mobile list-unstyled d-flex d-lg-none mt-auto mb-0 text-center">
+              <li class="flex-grow-1">
+                <a
+                  href="#"
+                  class="nav-link active">
+                  EN
+                </a>
+              </li>
+              <li class="flex-grow-1">
+                <a
+                  href="#"
+                  class="nav-link">
+                  AZ
+                </a>
+              </li>
+              <li class="flex-grow-1">
+                <a
+                  href="#"
+                  class="nav-link">
+                  RU
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <div class="nav-item dropdown lang-dropdown">
+          <span
+            class="menu-toggle d-block d-lg-none ms-auto"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#main-menu">
+            <span class="menu-toggle-line top"></span>
+            <span class="menu-toggle-line bottom"></span>
+          </span>
+
+          <div class="nav-item dropdown lang-dropdown d-none d-lg-block">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -340,7 +373,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 mb-5 mb-lg-0 text-center text-lg-start">
             <a
               class="d-inline-block"
               href="/">
@@ -350,7 +383,7 @@
                 width="185" />
             </a>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="d-flex flex-column row-gap-4 text-white text-center">
               <div class="flow flow-sm">
                 <b>Address:</b>
@@ -375,7 +408,7 @@
             </div>
           </div>
           <div class="col-lg-3">
-            <ul class="social-links list-unstyled justify-content-end m-0">
+            <ul class="social-links list-unstyled justify-content-center justify-content-lg-end m-0">
               <li>
                 <a
                   class="link-white"

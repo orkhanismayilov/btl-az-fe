@@ -54,9 +54,9 @@
   </head>
   <body>
     <header>
-      <p class="slogan m-0 pt-2 text-center text-orange fw-bold">MICE to me you!</p>
+      <p class="slogan d-none d-lg-block m-0 pt-2 text-center text-orange fw-bold">MICE to me you!</p>
 
-      <nav class="navbar navbar-expand-lg py-0">
+      <nav class="navbar navbar-expand-lg py-0 pt-3 pt-lg-0">
         <div class="container">
           <a
             class="navbar-brand py-0"
@@ -69,42 +69,75 @@
 
           <div
             id="main-menu"
-            class="navbar-nav">
-            <li class="nav-item">
+            class="navbar-nav offcanvas offcanvas-lg offcanvas-start border-orange-light"
+            data-bs-backdrop="false">
+            <div class="nav-item">
               <a
                 class="nav-link active"
                 aria-current="page"
                 href="/">
                 Home
               </a>
-            </li>
+            </div>
 
-            <li class="nav-item">
+            <div class="nav-item">
               <a
                 class="nav-link"
                 href="/projects.html">
                 Projects
               </a>
-            </li>
+            </div>
 
-            <li class="nav-item">
+            <div class="nav-item">
               <a
                 class="nav-link"
                 href="/gallery.html">
                 Gallery
               </a>
-            </li>
+            </div>
 
-            <li class="nav-item">
+            <div class="nav-item">
               <a
                 class="nav-link"
                 href="/contact-us.html">
                 Contact Us
               </a>
-            </li>
+            </div>
+
+            <ul class="langs-mobile list-unstyled d-flex d-lg-none mt-auto mb-0 text-center">
+              <li class="flex-grow-1">
+                <a
+                  href="#"
+                  class="nav-link active">
+                  EN
+                </a>
+              </li>
+              <li class="flex-grow-1">
+                <a
+                  href="#"
+                  class="nav-link">
+                  AZ
+                </a>
+              </li>
+              <li class="flex-grow-1">
+                <a
+                  href="#"
+                  class="nav-link">
+                  RU
+                </a>
+              </li>
+            </ul>
           </div>
 
-          <div class="nav-item dropdown lang-dropdown">
+          <span
+            class="menu-toggle d-block d-lg-none ms-auto"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#main-menu">
+            <span class="menu-toggle-line top"></span>
+            <span class="menu-toggle-line bottom"></span>
+          </span>
+
+          <div class="nav-item dropdown lang-dropdown d-none d-lg-block">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -209,7 +242,7 @@
           </h3>
 
           <ul
-            class="tab-nav list-unstyled m-0 d-flex flex-nowrap gap-3 fw-bold fs-5 text-center"
+            class="tab-nav list-unstyled mb-0 pb-2 pb-lg-0 d-flex flex-nowrap gap-2 gap-lg-3 fw-bold text-center"
             role="tablist">
             <li
               class="tab-nav-item flex-grow-1 py-2 px-3 rounded-pill gradient-hover active"
@@ -255,7 +288,7 @@
             </li>
           </ul>
 
-          <div class="tab-content mt-4">
+          <div class="tab-content mt-lg-4">
             <div
               class="tab-pane fade specialization-tab-pane show active"
               id="mice-tab-pane"
@@ -280,7 +313,7 @@
                     src="/assets/images/illustrations/airplane.svg"
                     alt="Airplane Illustration" />
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-none d-lg-block">
                   <div class="specialization-image-wrapper">
                     <img
                       src="/assets/images/specialization/specialization-1.jpg"
@@ -321,7 +354,7 @@
                     src="/assets/images/illustrations/airplane.svg"
                     alt="Airplane Illustration" />
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-none d-lg-block">
                   <div class="specialization-image-wrapper">
                     <img
                       src="/assets/images/specialization/specialization-2.jpg"
@@ -362,7 +395,7 @@
                     src="/assets/images/illustrations/airplane.svg"
                     alt="Airplane Illustration" />
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-none d-lg-block">
                   <div class="specialization-image-wrapper">
                     <img
                       src="/assets/images/specialization/specialization-3.jpg"
@@ -403,7 +436,7 @@
                     src="/assets/images/illustrations/airplane.svg"
                     alt="Airplane Illustration" />
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-none d-lg-block">
                   <div class="specialization-image-wrapper">
                     <img
                       src="/assets/images/specialization/specialization-4.jpg"
@@ -443,7 +476,7 @@
                     src="/assets/images/illustrations/airplane.svg"
                     alt="Airplane Illustration" />
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-none d-lg-block">
                   <div class="specialization-image-wrapper">
                     <img
                       src="/assets/images/specialization/specialization-5.jpg"
@@ -495,7 +528,7 @@
                     src="/assets/images/illustrations/airplane.svg"
                     alt="Airplane Illustration" />
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 d-none d-lg-block">
                   <div class="specialization-image-wrapper">
                     <img
                       src="/assets/images/specialization/specialization-6.jpg"
@@ -545,21 +578,21 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 mt-5 mt-lg-0">
               <img
                 src="/assets/images/illustrations/world-map.svg"
                 alt="World Map" />
             </div>
           </div>
 
-          <div class="pt-5 mb-5">
+          <div class="pt-5 mb-lg-5">
             <h4 class="fw-bold text-center">
               Trusted by the innovative
               <span class="text-orange">companies</span>
               worldwide
             </h4>
 
-            <ul class="companies-list list-unstyled mt-4">
+            <ul class="companies-list list-unstyled mt-4 pb-2 pb-lg-0">
               <li>
                 <img
                   src="/assets/images/companies/jw-marriot.svg"
@@ -603,7 +636,7 @@
             </ul>
           </div>
 
-          <div class="row align-items-lg-center">
+          <div class="row d-none d-lg-flex align-items-lg-center">
             <div class="col-lg-6">
               <img
                 class="w-75 mx-auto"
@@ -631,23 +664,23 @@
         </div>
       </section>
 
-      <section class="section-spacing mt-5">
+      <section class="section-spacing mt-lg-5">
         <div class="container pt-5 border-top border-orange">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-8 col-lg-6">
               <h3 class="section-title">
                 Meet our
                 <span class="text-gradient">Gallery</span>
               </h3>
             </div>
-            <div class="col-lg-6">
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="fw-bold">
+            <div class="col-4 col-lg-6">
+              <div class="d-flex align-items-center">
+                <span class="d-none d-lg-block fw-bold">
                   Explore our gallery for our projects. Stay updates and
                   <br />
                   MICE to meet you!
                 </span>
-                <i class="fa-regular fa-arrow-down fs-2 text-orange"></i>
+                <i class="fa-regular fa-arrow-down ms-auto fs-2 text-orange"></i>
               </div>
             </div>
           </div>
@@ -678,19 +711,19 @@
                   alt="Gallery Section 4" />
               </div>
 
-              <div class="gallery-section-grid-item col-span-4">
+              <div class="gallery-section-grid-item col-span-4 d-none d-lg-block">
                 <img
                   src="/assets/images/gallery-section/gallery-5.jpg"
                   alt="Gallery Section 5" />
               </div>
 
-              <div class="gallery-section-grid-item col-span-2">
+              <div class="gallery-section-grid-item col-span-2 d-none d-lg-block">
                 <img
                   src="/assets/images/gallery-section/gallery-6.jpg"
                   alt="Gallery Section 6" />
               </div>
 
-              <div class="gallery-section-grid-item col-span-4">
+              <div class="gallery-section-grid-item col-span-4 d-none d-lg-block">
                 <img
                   src="/assets/images/gallery-section/gallery-7.jpg"
                   alt="Gallery Section 7" />
@@ -709,65 +742,81 @@
       <div class="section-spacing">
         <div class="container pt-5 border-top border-orange">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-8 col-lg-6">
               <h3 class="section-title">
                 Meet our
                 <span class="text-gradient">Projects</span>
               </h3>
             </div>
-            <div class="col-lg-6">
-              <div class="d-flex justify-content-between align-items-center">
-                <span class="fw-bold">
+            <div class="col-4 col-lg-6">
+              <div class="d-flex align-items-center">
+                <span class="d-none d-lg-block fw-bold">
                   Explore our blog for the latest news, expert insights and
                   <br />
                   our projects. Stay updates and MICE to meet you!
                 </span>
-                <i class="fa-regular fa-arrow-down fs-2 text-orange"></i>
+                <i class="fa-regular fa-arrow-down ms-auto fs-2 text-orange"></i>
               </div>
             </div>
           </div>
 
-          <div class="linked-wrapper">
-            <div class="row w-100">
-              <div class="col-lg-6">
+          <div class="row">
+            <div class="col-12">
+              <div class="linked-wrapper row row-gap-5">
+                <div class="col-md-6">
+                  <a
+                    class="project-card flow"
+                    href="#">
+                    <div class="project-card-img-wrapper">
+                      <img
+                        src="/assets/images/projects-section/projects-1.jpg"
+                        alt="Kaizen Club" />
+                    </div>
+                    <h5 class="fw-bold text-uppercase">Kaizen Club</h5>
+                    <p>
+                      On August 25-27, for the first time in Azerbaijan - Baku, the IV International Kaizen Club
+                      Congress was held.
+                    </p>
+                  </a>
+                </div>
+                <div class="col-md-6">
+                  <a
+                    href="#"
+                    class="project-card flow">
+                    <div class="project-card-img-wrapper">
+                      <img
+                        src="/assets/images/projects-section/projects-2.jpg"
+                        alt="MMP Forum 2020" />
+                    </div>
+                    <h5 class="fw-bold text-uppercase">MMP Forum 2020</h5>
+                    <p>
+                      Register for participation in MMP Forum 2020 on July 1-4, 2020 in Kyiv, Ukraine! Because only by
+                      the end of March 2020 you can buy early bird packages at the great prices!
+                    </p>
+                  </a>
+                </div>
+
                 <a
-                  class="project-card flow"
-                  href="#">
-                  <div class="project-card-img-wrapper">
-                    <img
-                      src="/assets/images/projects-section/projects-1.jpg"
-                      alt="Kaizen Club" />
-                  </div>
-                  <h5 class="fs-4 fw-bold text-uppercase">Kaizen Club</h5>
-                  <p>
-                    On August 25-27, for the first time in Azerbaijan - Baku, the IV International Kaizen Club Congress
-                    was held.
-                  </p>
+                  class="linked-wrapper-link d-none d-lg-grid"
+                  href="/projects.html">
+                  <i class="fa-regular fa-arrow-up-right"></i>
                 </a>
               </div>
-              <div class="col-lg-6">
+
+              <div class="d-flex d-lg-none mt-5">
                 <a
-                  href="#"
-                  class="project-card flow">
-                  <div class="project-card-img-wrapper">
-                    <img
-                      src="/assets/images/projects-section/projects-2.jpg"
-                      alt="MMP Forum 2020" />
+                  href="/projects.html"
+                  class="btn btn-primary mx-auto"
+                  type="button">
+                  <div class="btn-inner-wrapper">
+                    <span class="btn-inner-text">View all projects</span>
+                    <span class="btn-inner-icon">
+                      <i class="fa-regular fa-arrow-up-right"></i>
+                    </span>
                   </div>
-                  <h5 class="fs-4 fw-bold text-uppercase">MMP Forum 2020</h5>
-                  <p>
-                    Register for participation in MMP Forum 2020 on July 1-4, 2020 in Kyiv, Ukraine! Because only by the
-                    end of March 2020 you can buy early bird packages at the great prices!
-                  </p>
                 </a>
               </div>
             </div>
-
-            <a
-              class="linked-wrapper-link"
-              href="/projects.html">
-              <i class="fa-regular fa-arrow-up-right"></i>
-            </a>
           </div>
         </div>
       </div>
@@ -776,7 +825,7 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-lg-3">
+          <div class="col-lg-3 mb-5 mb-lg-0 text-center text-lg-start">
             <a
               class="d-inline-block"
               href="/">
@@ -786,7 +835,7 @@
                 width="185" />
             </a>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="d-flex flex-column row-gap-4 text-white text-center">
               <div class="flow flow-sm">
                 <b>Address:</b>
@@ -811,7 +860,7 @@
             </div>
           </div>
           <div class="col-lg-3">
-            <ul class="social-links list-unstyled justify-content-end m-0">
+            <ul class="social-links list-unstyled justify-content-center justify-content-lg-end m-0">
               <li>
                 <a
                   class="link-white"

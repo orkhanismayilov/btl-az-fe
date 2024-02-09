@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use 'functions';
 
 .text-orange {
@@ -52,13 +53,11 @@
     transition: all 0.15s;
   }
 
-  @media (hover) {
-    &:hover {
-      color: $clr-primary;
+  &:hover {
+    color: $clr-primary;
 
-      i {
-        transform: translateX(5px);
-      }
+    i {
+      transform: translateX(5px);
     }
   }
 }
@@ -77,6 +76,10 @@
 
 .border-orange {
   border-color: $clr-primary !important;
+
+  &-light {
+    border-color: color.scale($clr-primary, $alpha: -70%) !important;
+  }
 }
 
 .section-spacing {
@@ -96,12 +99,17 @@
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 
   &-bold {
     font-weight: 800;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 3rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -132,7 +140,14 @@
 }
 
 .tab-nav {
+  overflow: auto;
+  margin-right: -0.75rem;
+  padding-right: 0.75rem;
+  font-size: 1rem;
+
   &-item {
+    min-width: 35%;
+    flex-shrink: 0;
     background-color: rgba($clr-primary, 0.5);
     color: $clr-black;
     text-decoration: none;
@@ -143,6 +158,11 @@
       background-color: $clr-primary;
       color: white;
     }
+  }
+
+  @media (min-width: 768px) {
+    margin-right: unset;
+    font-size: 1.25rem;
   }
 }
 
@@ -163,15 +183,13 @@
     z-index: -1;
   }
 
-  @media (hover) {
-    &:hover,
-    &:focus-visible {
-      color: white;
-      background-color: transparent;
+  &:hover,
+  &:focus-visible {
+    color: white;
+    background-color: transparent;
 
-      &::before {
-        opacity: 1;
-      }
+    &::before {
+      opacity: 1;
     }
   }
 }
@@ -181,20 +199,22 @@
   --bs-btn-hover-bg: transparent;
   --bs-btn-active-bg: #{$clr-primary};
   --bs-btn-border-width: 0;
-  --bs-btn-font-size: 1.5rem;
+  --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 700;
 
   padding: 0;
   background-color: unset !important;
   border-radius: 2rem;
 
-  @media (hover) {
-    &:hover,
-    &:focus-visible {
-      .btn-inner-text {
-        background-color: transparent;
-      }
+  &:hover,
+  &:focus-visible {
+    .btn-inner-text {
+      background-color: transparent;
     }
+  }
+
+  @media (min-width: 992px) {
+    --bs-btn-font-size: 1.5rem;
   }
 }
 
@@ -213,7 +233,7 @@
     display: grid;
     place-items: center;
     height: 100%;
-    padding-inline: 3.5rem;
+    padding-inline: 1.5rem;
     position: relative;
     background-color: $clr-primary;
     border-radius: 2rem;
@@ -260,6 +280,12 @@
   &::after {
     inset: auto var(--_shift-x) var(--_shift-y) auto;
     border-color: $clr-primary transparent transparent transparent;
+  }
+
+  @media (min-width: 992px) {
+    .btn-inner-text {
+      padding-inline: 3.5rem;
+    }
   }
 }
 
